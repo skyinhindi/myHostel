@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/headAlt.ejs")  %> 
+<body>
+    <%- include("./partials/headerAdmin.ejs") %>
+    <main>
+        <div class="login-page">
+            <div class="form">
+                <p><%- message  %> </p>
+                <br>
+                <form action="/search-records" method="POST" id="searchForm" class="login-form">
+                    <select name="searchBy" id="searchBy" form="searchForm">
+                        <option value="" selected disabled hidden>Search By</option>
+                        <option value="RegNo">RegNo</option>
+                        <option value="Name">Name</option>
+                        <option value="Room">Room</option>
+                    </select>
+                    <br>
+                    <input type="text" name="searchKey" id="searchKey"  placeholder="value" />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+          </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+        <% if(!rows.length == 0){ %>
+            <h2>Fees Due Records:</h2> 
+        <br>
+    <table>
+        <tr>
+            <th>Sno</th>
+            <th>Registration Number</th>
+            <th>Name</th>
+            <th>Hostel Fees</th>
+            <th>Mess Fees</th>
+        </tr>
+        <%
+        rows.forEach(row => {
+        %> 
+            <tr>
+                <td> <%-row.Sno%> </td>
+                <td> <%-row.RegNo%> </td>
+                <td> <%-row.Name%> </td>
+                <td> <%-row.Hostel_Fees%> </td>
+                <td> <%-row.Mess_Fees%> </td>
+            </tr>
+        <%
+        });
+        %>
+    </table>
+        <% }else{ %>
+            <p>No Records Found</p>
+        <% } %> 
+    </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

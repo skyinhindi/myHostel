@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <br>
+    <main>
+        <p style="color: #333;"><%- Name %> </p>
+        <p style="color: #333;"><%- Block + '-' + Room %> </p>
+        <br>
+        <div id="logged-in-grid">
+            <a href="create-complaint">
+                <div class="card">
+                    <h4>REGISTER A REQUEST/COMPLAINT</h4>
+                </div>
+            </a>
+            <a href="your-complaints">
+                <div class="card">
+                    <h4>YOUR COMPLAINTS</h4>
+                </div>
+            </a>
+            <a href="fees-dues">
+                <div class="card">
+                    <h4>FEES DUES</h4>
+                </div>
+            </a>
+            <a href="change-password">
+                <div class="card">
+                    <h4>CHANGE PASSWORD</h4>
+                </div>
+            </a>
+            <a href="vacate-room">
+                <div class="card">
+                    <h4>VACATE ROOM</h4>
+                </div>
+            </a>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+    <script>
+        window.history.pushState("", "", '/logged-in');
+    </script>
+</body>
+</html>

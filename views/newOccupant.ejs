@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/headAlt.ejs")  %> 
+<body>
+    <%- include("./partials/headerAdmin.ejs") %>
+    <main>
+        <div class="login-page">
+            <div class="form">
+                <p><%- message  %> </p>
+                <br>
+                <form action="/new-occupant" method="POST" id="newOccupantForm" class="login-form">
+                    <input type="text" name="newReg" id="newReg"  placeholder="Registration Number" />
+                    <input type="text" name="newName" id="newName"  placeholder="Name" />
+                    <input type="text" name="newBlock" id="newBlock"  placeholder="Block" />
+                    <input type="text" name="newRoom" id="newRoom"  placeholder="Room No" />
+                    <input type="text" name="newDOB" id="newDOB"  placeholder="Date of Birth" />
+                    <input type="text" name="newRoomType" id="newRoomType"  placeholder="Room Type" />
+                    <input type="text" name="newPhone" id="newPhone"  placeholder="Phone" />
+                    <input type="password" name="newPass" id="newPass"  placeholder="Password" />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+          </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>>
+</body>
+</html>

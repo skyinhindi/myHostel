@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/headAlt.ejs")  %> 
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+        <div class="login-page">
+            <div class="form">
+                <p><%- message  %> </p>
+                <br>
+                <form action="/create-complaint" method="POST" id="complaintForm" class="login-form">
+                    <select name="reqType" id="reqType" form="complaintForm">
+                        <option value="" selected disabled hidden>Request Type</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Repair">Repair</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br>
+                    <input type="text" name="description" id="description"  placeholder="Description" />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+          </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>>
+</body>
+</html>

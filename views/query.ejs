@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/headerAdmin.ejs") %>
+    <main>
+        <% if(!rows.length == 0){ %>
+            <table>
+                <tr>
+                    <th>RegNo</th>
+                    <th>Name</th>
+                    <th>Block</th>
+                    <th>Room</th>
+                    <th>DOB</th>
+                    <th>Room Type</th>
+                    <th>Phone</th>
+                </tr>
+                <%
+                rows.forEach(row => {
+                %> 
+                    <tr>
+                        <td> <%-row.RegNo%> </td>
+                        <td> <%-row.Name%> </td>
+                        <td> <%-row.Block%> </td>
+                        <td> <%-row.Room%> </td>
+                        <td> <%-row.DOB%> </td>
+                        <td> <%-row.RoomType%> </td>
+                        <td> <%-row.Phone%> </td>
+                    </tr>
+                </table>
+                <%
+                });
+                %>
+            <%}else{ %> 
+                <p>NO RECORDS FOUND</p>
+            <% } %>
+    </main>
+</body>
+</html>

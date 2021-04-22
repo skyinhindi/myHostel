@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/headAlt.ejs")  %> 
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+        <div class="login-page">
+            <div class="form">
+                <p><%- message %> </p>
+                <p>Your Password is Required to Verify.</p>
+                <br>
+                <form action="/vacate-room" method="POST" class="login-form">
+                    <input type="password" name="pass" id="pass"  placeholder="password" required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+          </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+    <script>
+        window.history.pushState("", "", '/');
+    </script>
+</body>
+</html>

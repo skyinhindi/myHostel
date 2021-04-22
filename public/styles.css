@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+:root{
+    --color-primary:rgb(216, 113, 16);
+    --color-secondary:#fff;
+    --color-theme:#A8C686;
+    --font-logo:'Lobster', cursive;
+    --font-primary: "Roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+main{
+    padding: 30px;
+}
+
+button{
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 5px;
+    background-color:var(--color-secondary) ;
+    border-radius: 5px;
+}
+
+.button{
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 5px;
+    background-color:none ;
+    border-radius: 5px;
+}
+
+.button:hover{
+    border: 2px solid var(--color-secondary);
+    background-color:var(--color-secondary) ;
+    color: var(--color-primary);
+}
+
+button:hover{
+    border: 2px solid var(--color-primary);
+    background-color:var(--color-primary) ;
+    color: var(--color-secondary);
+}
+
+header{
+    background-color: var(--color-primary) ;
+    color: var(--color-secondary);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
+}
+
+header h2{
+    font-family: var(--font-logo);
+    font-size: 2.2em;
+    margin-left: 40px;
+}
+
+header nav{
+    padding: 10px;
+    margin-left: 40px;
+}
+
+header nav a{
+    margin: 5px 5px 5px 5px;
+}
+
+header nav a:hover{
+    color:red;
+}
+
+#logged-in-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+}
+
+.card{
+    background-color:var(--color-theme);
+    color:var(--color-secondary);
+    height: 10vh;
+    padding: 30px;
+    margin:30px;
+    border-radius: 5px;
+}
+
+.card:hover{
+    box-shadow: #333 5px 5px 5px;
+}
+
+table{
+    border: 2px var(--color-theme) solid;
+}
+
+th{
+    background-color: var(--color-primary);
+    padding: 5px;
+    color: var(--color-secondary);
+    font-size: 1.2Sem;
+}
+td{
+    background-color: #ccc;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+select{
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+select option{
+    background: #fff;
+    outline: none;
+}
+
+footer{
+    background-color: var(--color-primary) ;
+    color: var(--color-secondary);
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/headerAdmin.ejs") %>
+    <br>
+    <main>
+        <div id="logged-in-grid">
+            <a href="new-occupant">
+                <div class="card">
+                    <h4>REGISTER NEW OCCUPANT</h4>
+                </div>
+            </a>
+            <a href="view-records">
+                <div class="card">
+                    <h4>VIEW ALL RECORDS</h4>
+                </div>
+            </a>
+            <a href="search-records">
+                <div class="card">
+                    <h4>SEARCH RECORDS</h4>
+                </div>
+            </a>
+            <a href="view-complaints">
+                <div class="card">
+                    <h4>VIEW COMPLAINTS</h4>
+                </div>
+            </a>
+            <a href="view-fees-dues">
+                <div class="card">
+                    <h4>VIEW FEES DUES</h4>
+                </div>
+            </a>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+    <script>
+        window.history.pushState("", "", '/admin');
+    </script>
+</body>
+</html>
