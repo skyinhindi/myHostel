@@ -109,5 +109,12 @@
           </div>
     </main>
     <%- include("./partials/footer.ejs") %>
+    <script>
+        document.body.addEventListener("keydown", function (event) {
+        if (event.keyCode === 33) {
+            window.location.replace("/");
+        }
+    });
+    </script>
 </body>
 </html>
