@@ -4,6 +4,7 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <main>
+        <% if(!rows.length == 0){ %>
         <h2>Complaints:</h2>
         <br>
     <table>
@@ -28,6 +29,9 @@
         });
         %>
     </table>
+    <% }else{ %>
+            <p>No Records Found</p>
+        <% } %> 
     </main>
     <%- include("./partials/footer.ejs") %>
 </body>

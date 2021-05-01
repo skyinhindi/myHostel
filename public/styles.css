@@ -113,7 +113,7 @@ th{
     background-color: var(--color-primary);
     padding: 5px;
     color: var(--color-secondary);
-    font-size: 1.2Sem;
+    font-size: 1.2em;
 }
 td{
     background-color: #ccc;
@@ -146,4 +146,49 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+@media(max-width:940px){
+
+    header h2{
+        font-size: 2em;
+        position: relative;
+        left: -10%;
+    }
+
+    header nav{
+        padding: 0;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header nav a{
+        margin: 3px;
+        display: inline-block;
+    }
+
+    #logged-in-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .card{
+        padding: 30px;
+        height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    th{
+        padding: 1px;
+        font-size: 0.8em;
+    }
+    td{
+        padding: 1px;
+        font-size: 0.8em;
+    }
 }
