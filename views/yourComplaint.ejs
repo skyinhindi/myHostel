@@ -3,36 +3,38 @@
 <%- include("./partials/head.ejs") %>
 <body>
     <%- include("./partials/header.ejs") %>
-    <main>
-        <% if(!rows.length == 0){ %>
-        <h2>Complaints:</h2>
-        <br>
-    <table>
-        <tr>
-            <th>Sno</th>
-            <th>Registration Number</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Created</th>
-        </tr>
-        <%
-        rows.forEach(row => {
-        %> 
+    <center>
+        <main>
+            <% if(!rows.length == 0){ %>
+            <h2>COMPLAINTS</h2>
+            <br>
+        <table>
             <tr>
-                <td> <%-row.Sno%> </td>
-                <td> <%-row.RegNo%> </td>
-                <td> <%-row.Type%> </td>
-                <td> <%-row.Description%> </td>
-                <td> <%-row.Time%> </td>
+                <th>Sno</th>
+                <th>Registration Number</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Created</th>
             </tr>
-        <%
-        });
-        %>
-    </table>
-    <% }else{ %>
-            <p>No Records Found</p>
-        <% } %> 
-    </main>
+            <%
+            rows.forEach(row => {
+            %> 
+                <tr>
+                    <td> <%-row.Sno%> </td>
+                    <td> <%-row.RegNo%> </td>
+                    <td> <%-row.Type%> </td>
+                    <td> <%-row.Description%> </td>
+                    <td> <%-row.Time%> </td>
+                </tr>
+            <%
+            });
+            %>
+        </table>
+        <% }else{ %>
+                <p>No Records Found</p>
+            <% } %> 
+        </main>
+    </center>
     <%- include("./partials/footer.ejs") %>
 </body>
 </html>

@@ -19,6 +19,7 @@ body{
     position: relative;
     min-height: 100vh;
     font-family: var(--font-primary);
+    overflow-x: hidden;
 }
 
 a{
@@ -86,6 +87,38 @@ header nav a:hover{
     color:red;
 }
 
+#background-banner-image-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 96vh;
+    width: auto;
+}
+
+#background-banner-image-2{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0%);
+    height: 75vh;
+    width: auto;
+}
+
+#background-banner-image-3{
+    display: none;
+}
+
+#background-banner-image-4{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0%);
+    height: 85vh;
+    width: auto;
+    z-index: -1;
+}
+
 #logged-in-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -99,6 +132,7 @@ header nav a:hover{
     padding: 30px;
     margin:30px;
     border-radius: 5px;
+    box-shadow: #333 1px 1px 1px;
 }
 
 .card:hover{
@@ -177,10 +211,12 @@ footer{
 
     .card{
         padding: 30px;
+        opacity: 0.9;
         height: 12vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: #333 1px 1px 1px;
     }
 
     th{
@@ -190,5 +226,32 @@ footer{
     td{
         padding: 1px;
         font-size: 0.8em;
+    }
+
+    #background-banner-image-1{
+        top:72vh;
+        width: auto;
+        height: 50vh;
+    }
+
+    #background-banner-image-2{
+        top:55vh;
+        width: auto;
+        height: 40vh;
+    }
+
+    #background-banner-image-3{
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, 0%);
+        height: 70vh;
+        width: auto;
+        z-index: -1;
+        display: block;
+    }
+
+    #background-banner-image-4{
+        display: none;
     }
 }
